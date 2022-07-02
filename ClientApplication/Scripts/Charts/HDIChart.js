@@ -1,5 +1,5 @@
 ﻿// Shows years
-var years = [2010, 2011, 2012, 2013, 2014];
+var years = ['HDI' + 2010, 'HDI' + 2011, 'HDI' + 2012, 'HDI' + 2013, 'HDI' + 2014];
 
 // Display data
 var Afghanistan = [0.463, 0.471, 0.482, 0.487 , 0.491];

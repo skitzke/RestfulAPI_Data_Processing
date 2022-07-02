@@ -136,22 +136,51 @@
             'HDI 2014',
         ];
 
-        // The data that will be user in HDI chart.
-        const data = {
-            labels: labels,
-            datasets: [{
-                label: 'HDI dataset',
-                backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132)',
-                data: [
-                    $('#y2010').val(),
-                    $('#y2011').val(),
-                    $('#y2012').val(),
-                    $('#y2013').val(),
-                    $('#y2014').val(),
-                ],
-            }]
-        };
+        var ctx = document.getElementById("HDIChart");
+
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: 'https://localhost:44313/api/HDI/',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //alert(JSON.stringify(data));
+                    $.each(data, function (i, item) {
+                    var countries =     item.Country +
+                                        item.C2010 +
+                                        item.C2011 +
+                                        item.C2012 + 
+                                        item.C2013 +
+                                        item.C2014;
+                    var countryName = item.Country;
+                        var HDIChart = new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                                labels: labels,
+                                datasets: [
+                                    {
+                                        data: countries,
+                                        label: countryName,
+                                        borderColor: "#3e95cd",
+                                        fill: false
+                                    }
+                                ]
+                            }
+                        });
+                    }); //End of foreach Loop
+                    console.log(data);
+                }, //End of AJAX Success function
+
+                failure: function (data) {
+                    alert(data.responseText);
+                }, //End of AJAX failure function
+                error: function (data) {
+                    alert(data.responseText);
+                } //End of AJAX error function
+
+            });
+        });
 
         // A config to recognise that it should be a line graph used with the data.
         const config = {
