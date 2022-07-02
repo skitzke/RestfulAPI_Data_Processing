@@ -8,7 +8,6 @@
     "countries": {
       "description": "Countries list representing youth unemployment rates",
       "type": "array",
-
       "properties": {
         "country-rate-ID": {
           "description": "Country ID",
@@ -44,7 +43,9 @@
           "type": "number"
         }
       },
-      "required": [ "country-rate-ID" ]
+      "required": [
+        "country-rate-ID"
+      ]
     }
   },
   "additionalProperties": false

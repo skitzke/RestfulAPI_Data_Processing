@@ -1,6 +1,5 @@
 {
-  "countries": 
-  [
+  "countries": [
     {
       "$schema": "./Suicide-statisctics.json",
       "country-stat-ID": 1,

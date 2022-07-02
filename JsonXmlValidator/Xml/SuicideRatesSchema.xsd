@@ -1,22 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.w3schools.com" xmlns="https://www.w3schools.com" elementFormDefault="qualified">
-	<xs:element name="suicide-statistics">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="country" type="suicide-statisticsType" minOccurs="1" maxOccurs="unbounded"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.w3schools.com"
+           xmlns="https://www.w3schools.com" elementFormDefault="qualified">
+    <xs:element name="suicide-statistics">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="country" type="suicide-statisticsType" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
-	<xs:complexType name="suicide-statisticsType">
-		<xs:sequence>
-			<xs:element name="country-stat-ID" type="xs:integer" minOccurs="1" maxOccurs="unbounded"/>
-			<xs:element name="country-name" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="suicide-statistic-year" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="gender" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="age-group" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="suicides-number" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="country-population" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-		</xs:sequence>
-	</xs:complexType>
+    <xs:complexType name="suicide-statisticsType">
+        <xs:sequence>
+            <xs:element name="country-stat-ID" type="xs:integer" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="country-name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="suicide-statistic-year" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="gender" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="age-group" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="suicides-number" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="country-population" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
 </xs:schema>

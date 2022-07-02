@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <unemployment-rates>
-	xmlns="https://www.w3schools.com"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="https://www.w3schools.com/xml YouthUnemploymentRatesXMLSchema.xsd">
-	<country>
-		<country-rate-ID>1</country-rate-ID>
-		<country-name>Lithuania</country-name>
-		<country-code>LTU</country-code>
-		<unemployment-rate-2010>20</unemployment-rate-2010>
-		<unemployment-rate-2011>21</unemployment-rate-2011>
-		<unemployment-rate-2012>22</unemployment-rate-2012>
-		<unemployment-rate-2013>23</unemployment-rate-2013>
-		<unemployment-rate-2014>24</unemployment-rate-2014>
-	</country>
+    xmlns="https://www.w3schools.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://www.w3schools.com/xml YouthUnemploymentRatesXMLSchema.xsd">
+    <country>
+        <country-rate-ID>1</country-rate-ID>
+        <country-name>Lithuania</country-name>
+        <country-code>LTU</country-code>
+        <unemployment-rate-2010>20</unemployment-rate-2010>
+        <unemployment-rate-2011>21</unemployment-rate-2011>
+        <unemployment-rate-2012>22</unemployment-rate-2012>
+        <unemployment-rate-2013>23</unemployment-rate-2013>
+        <unemployment-rate-2014>24</unemployment-rate-2014>
+    </country>
 </unemployment-rates>

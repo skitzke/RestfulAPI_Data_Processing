@@ -105,10 +105,8 @@ public HttpResponseMessage Put(int id, [FromBody] development_index DevIndex)
                     var entity = entities.development_index.FirstOrDefault(hdi => hdi.HDI_ID == id);
 
                     if (entity == null)
-                    {
                         return Request.CreateErrorResponse(HttpStatusCode.NotFound,
                             "Country with ID = " + id + " not found to update");
-                    }
 
                     entity.HDI_Rank = DevIndex.HDI_Rank;
                     entity.Country = DevIndex.Country;
@@ -140,10 +138,8 @@ public HttpResponseMessage DeleteCountry(int id)
                 {
                     var entity = entities.development_index.FirstOrDefault(hdi => hdi.HDI_ID == id);
                     if (entity == null)
-                    {
                         return Request.CreateErrorResponse(HttpStatusCode.NotFound,
                             "Country with ID = " + id + " not found to delete");
-                    }
 
                     entities.development_index.Remove(entity);
                     entities.SaveChanges();

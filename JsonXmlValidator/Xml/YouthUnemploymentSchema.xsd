@@ -1,24 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.w3schools.com" xmlns="https://www.w3schools.com" elementFormDefault="qualified">
-	<xs:element name="unemployment-rates">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="country" type="country-statistics" minOccurs="1" maxOccurs="unbounded"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.w3schools.com"
+           xmlns="https://www.w3schools.com" elementFormDefault="qualified">
+    <xs:element name="unemployment-rates">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="country" type="country-statistics" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
-	<xs:complexType name="country-statistics">
-		<xs:sequence>
-			<xs:element name="country-rate-ID" type="xs:integer" minOccurs="1" maxOccurs="unbounded"/>
-			<xs:element name="country-name" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="country-code" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="unemployment-rate-2010" type="xs:double" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="unemployment-rate-2011" type="xs:double" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="unemployment-rate-2012" type="xs:double" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="unemployment-rate-2013" type="xs:double" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="unemployment-rate-2014" type="xs:double" minOccurs="1" maxOccurs="1"/>
-		</xs:sequence>
-	</xs:complexType>
+    <xs:complexType name="country-statistics">
+        <xs:sequence>
+            <xs:element name="country-rate-ID" type="xs:integer" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="country-name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="country-code" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="unemployment-rate-2010" type="xs:double" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="unemployment-rate-2011" type="xs:double" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="unemployment-rate-2012" type="xs:double" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="unemployment-rate-2013" type="xs:double" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="unemployment-rate-2014" type="xs:double" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
 
 </xs:schema>

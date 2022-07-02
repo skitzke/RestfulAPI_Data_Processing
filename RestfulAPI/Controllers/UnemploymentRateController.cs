@@ -84,10 +84,8 @@ namespace RestfulAPI.Controllers
                     var entity = entities.unemployment_rates.FirstOrDefault(u => u.rate_ID == id);
 
                     if (entity == null)
-                    {
                         return Request.CreateErrorResponse(HttpStatusCode.NotFound,
                             "Country with ID = " + id + " not found to update");
-                    }
 
                     entity.Country_Name = rate.Country_Name;
                     entity.Country_Code = rate.Country_Code;
@@ -119,10 +117,8 @@ namespace RestfulAPI.Controllers
                 {
                     var entity = entities.unemployment_rates.FirstOrDefault(u => u.rate_ID == id);
                     if (entity == null)
-                    {
                         return Request.CreateErrorResponse(HttpStatusCode.NotFound,
                             "Country with ID = " + id + " not found to delete");
-                    }
 
                     entities.unemployment_rates.Remove(entity);
                     entities.SaveChanges();

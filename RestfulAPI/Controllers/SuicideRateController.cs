@@ -84,10 +84,8 @@ namespace RestfulAPI.Controllers
                     var entity = entities.suicide_statistics.FirstOrDefault(s => s.stat_ID == id);
 
                     if (entity == null)
-                    {
                         return Request.CreateErrorResponse(HttpStatusCode.NotFound,
                             "Country with ID = " + id + " not found to update");
-                    }
 
                     entity.country = stats.country;
                     entity.year = stats.year;
@@ -118,10 +116,8 @@ namespace RestfulAPI.Controllers
                 {
                     var entity = entities.suicide_statistics.FirstOrDefault(s => s.stat_ID == id);
                     if (entity == null)
-                    {
                         return Request.CreateErrorResponse(HttpStatusCode.NotFound,
                             "Country with ID = " + id + " not found to delete");
-                    }
 
                     entities.suicide_statistics.Remove(entity);
                     entities.SaveChanges();

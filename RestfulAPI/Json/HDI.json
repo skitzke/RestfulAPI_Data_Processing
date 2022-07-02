@@ -4,7 +4,6 @@
       "$schema": "./HDISchema.json",
       "country-hdi-ID": 1,
       "country-hdi-rank": 68,
-      
       "country-name": "Albania",
       "HDI-2010": 0.46,
       "HDI-2011": 0.54,

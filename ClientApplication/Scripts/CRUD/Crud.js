@@ -1,5 +1,4 @@
-﻿function testInsert()
-{
+﻿function testInsert() {
     var hdiRank = $("#hdiRank").val();
     var Country = $("#country").val();
     var _2010 = $("#y2010").val();
@@ -13,7 +12,15 @@
         url: "https://localhost:44313/api/HDI/",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        data: { hdiRank: hdiRank, Country : Country, _2010 :  _2010, _2011: _2011, _2012: _2012, _2013: _2013, _2014: _2014},
+        data: {
+            hdiRank: hdiRank,
+            Country: Country,
+            _2010: _2010,
+            _2011: _2011,
+            _2012: _2012,
+            _2013: _2013,
+            _2014: _2014
+        },
         success: function (data) {
             alert("success");
         },

@@ -8,7 +8,6 @@
     "countries": {
       "description": "Countries list with suicide statistics",
       "type": "array",
-
       "properties": {
         "country-stat-ID": {
           "description": "Suicide statisctics ID per country",
@@ -40,7 +39,9 @@
           "type": "integer"
         }
       },
-      "required": [ "country-stat-ID" ]
+      "required": [
+        "country-stat-ID"
+      ]
     }
   },
   "additionalProperties": false
