@@ -22,19 +22,19 @@ namespace RestfulAPI.Controllers
     {
             
         
-//         #region SELECT CREATE UPDATE DELETE actions
-//         /// <summary>
-//         ///  Gets the list of all countries from HDI database table.
-//         /// </summary>
-//         /// <returns>Returns a list of countries</returns>
-//          public IEnumerable<development_index> GetCountries() 
-//          {
-//              using (HDIEntities entities = new HDIEntities()) 
-//              {
-//                  return entities.development_index.ToList();
-//              } 
-//          }
-// //
+        #region SELECT CREATE UPDATE DELETE actions
+        /// <summary>
+        ///  Gets the list of all countries from HDI database table.
+        /// </summary>
+        /// <returns>Returns a list of countries</returns>
+         public IEnumerable<development_index> GetCountries() 
+         {
+             using (HDIEntities entities = new HDIEntities()) 
+             {
+                 return entities.development_index.ToList();
+             } 
+         }
+//
          /// <summary>
          /// Gets a single country based on the ID inputted from HDI database table.
          /// </summary>
@@ -58,115 +58,115 @@ namespace RestfulAPI.Controllers
                  }
              }
          }
-//
-//         /// <summary>
-//         /// Creates a new record in the HDI database table.
-//         /// </summary>
-//         /// <param name="DevIndex">Database table as an object</param>
-//         /// <returns>Returns a HttpResponseMessage if the creation was successfull</returns>
-//         public HttpResponseMessage PostNewCountry([FromBody] development_index DevIndex) 
-//         {
-//             try
-//             {
-//
-//                 JSchema schema = JSchema.Parse(@"{
-//   'type': 'object',
-//   'properties': {
-//     'name': {'type':'string'},
-//     'roles': {'type': 'array'}
-//   }
-// }");
-//                 JObject user = JObject.Parse(@"{
-//   'name': 'Arnie Admin',
-//   'roles': ['Developer', 'Administrator']
-// }");
-//                 bool valid = user.IsValid(schema);
-//                 // true
-//
-//
-//                 using (HDIEntities entities = new HDIEntities())
-//                 {
-//                     entities.development_index.Add(DevIndex);
-//                     entities.SaveChanges();
-//
-//                     var message = Request.CreateResponse(HttpStatusCode.Created, DevIndex);
-//                     message.Headers.Location = new Uri(Request.RequestUri + DevIndex.HDI_ID.ToString());
-//                     return message;
-//                 }
-//             }
-//             catch (Exception ex) 
-//             {
-//                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
-//             }
-//         }
-//
-//         /// <summary>
-//         /// Updates a record in the HDI database table based on the inputted id with inputted values.
-//         /// </summary>
-//         /// <param name="id">Unique identifier</param>
-//         /// <param name="DevIndex">Database table as an object</param>
-//         /// <returns>Returns a HttpResponseMessage if the update was successfull</returns>
-//         public HttpResponseMessage Put(int id, [FromBody] development_index DevIndex)
-//         {
-//             try
-//             {
-//                 using (HDIEntities entities = new HDIEntities())
-//                 {
-//                     var entity = entities.development_index.FirstOrDefault(hdi => hdi.HDI_ID == id);
-//
-//                     if (entity == null)
-//                     {
-//                         return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Country with ID = " + id.ToString() + " not found to update");
-//                     }
-//                     else
-//                     {
-//                         entity.HDI_Rank = DevIndex.HDI_Rank;
-//                         entity.Country = DevIndex.Country;
-//                         entity.C2010 = DevIndex.C2010;
-//                         entity.C2011 = DevIndex.C2011;
-//                         entity.C2012 = DevIndex.C2012;
-//                         entity.C2013 = DevIndex.C2013;
-//                         entity.C2014 = DevIndex.C2014;
-//                         entities.SaveChanges();
-//                         return Request.CreateResponse(HttpStatusCode.OK, entity);
-//                     }
-//                 }
-//             }
-//             catch (Exception ex) 
-//             {
-//                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
-//             }
-//         }
-//
-//         /// <summary>
-//         /// Deletes a record from the HDI database table based on the inputted id.
-//         /// </summary>
-//         /// <param name="id">Unique identifier</param>
-//         /// <returns>Returns a HttpResponseMessage if the deletion was successfull</returns>
-//         public HttpResponseMessage DeleteCountry(int id)
-//         {
-//             try
-//             {
-//                 using (HDIEntities entities = new HDIEntities())
-//                 {
-//                     var entity = entities.development_index.FirstOrDefault(hdi => hdi.HDI_ID == id);
-//                     if (entity == null)
-//                     {
-//                         return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Country with ID = " + id.ToString() + " not found to delete");
-//                     }
-//                     else
-//                     {
-//                         entities.development_index.Remove(entity);
-//                         entities.SaveChanges();
-//                         return Request.CreateResponse(HttpStatusCode.OK);
-//                     }
-//                 }
-//             }
-//             catch  (Exception ex)
-//             {
-//                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
-//             }
-//         }
-//         #endregion
+
+        /// <summary>
+        /// Creates a new record in the HDI database table.
+        /// </summary>
+        /// <param name="DevIndex">Database table as an object</param>
+        /// <returns>Returns a HttpResponseMessage if the creation was successfull</returns>
+        public HttpResponseMessage PostNewCountry([FromBody] development_index DevIndex) 
+        {
+            try
+            {
+                JSchema schema = JSchema.Parse(@"{
+                  'type': 'object',
+                  'properties': {
+                    'name': {'type':'string'},
+                    'roles': {'type': 'array'}
+                  }
+                }");
+                
+                JObject user = JObject.Parse(@"{
+                  'name': 'Arnie Admin',
+                  'roles': ['Developer', 'Administrator']
+                }");
+                bool valid = user.IsValid(schema);
+                // true
+
+
+                using (HDIEntities entities = new HDIEntities())
+                {
+                    entities.development_index.Add(DevIndex);
+                    entities.SaveChanges();
+
+                    var message = Request.CreateResponse(HttpStatusCode.Created, DevIndex);
+                    message.Headers.Location = new Uri(Request.RequestUri + DevIndex.HDI_ID.ToString());
+                    return message;
+                }
+            }
+            catch (Exception ex) 
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+        }
+
+        /// <summary>
+        /// Updates a record in the HDI database table based on the inputted id with inputted values.
+        /// </summary>
+        /// <param name="id">Unique identifier</param>
+        /// <param name="DevIndex">Database table as an object</param>
+        /// <returns>Returns a HttpResponseMessage if the update was successfull</returns>
+        public HttpResponseMessage Put(int id, [FromBody] development_index DevIndex)
+        {
+            try
+            {
+                using (HDIEntities entities = new HDIEntities())
+                {
+                    var entity = entities.development_index.FirstOrDefault(hdi => hdi.HDI_ID == id);
+
+                    if (entity == null)
+                    {
+                        return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Country with ID = " + id.ToString() + " not found to update");
+                    }
+                    else
+                    {
+                        entity.HDI_Rank = DevIndex.HDI_Rank;
+                        entity.Country = DevIndex.Country;
+                        entity.C2010 = DevIndex.C2010;
+                        entity.C2011 = DevIndex.C2011;
+                        entity.C2012 = DevIndex.C2012;
+                        entity.C2013 = DevIndex.C2013;
+                        entity.C2014 = DevIndex.C2014;
+                        entities.SaveChanges();
+                        return Request.CreateResponse(HttpStatusCode.OK, entity);
+                    }
+                }
+            }
+            catch (Exception ex) 
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+        }
+
+        /// <summary>
+        /// Deletes a record from the HDI database table based on the inputted id.
+        /// </summary>
+        /// <param name="id">Unique identifier</param>
+        /// <returns>Returns a HttpResponseMessage if the deletion was successfull</returns>
+        public HttpResponseMessage DeleteCountry(int id)
+        {
+            try
+            {
+                using (HDIEntities entities = new HDIEntities())
+                {
+                    var entity = entities.development_index.FirstOrDefault(hdi => hdi.HDI_ID == id);
+                    if (entity == null)
+                    {
+                        return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Country with ID = " + id.ToString() + " not found to delete");
+                    }
+                    else
+                    {
+                        entities.development_index.Remove(entity);
+                        entities.SaveChanges();
+                        return Request.CreateResponse(HttpStatusCode.OK);
+                    }
+                }
+            }
+            catch  (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+        }
+        #endregion
     }
 }
