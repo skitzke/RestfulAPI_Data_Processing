@@ -6,8 +6,7 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet"/>
     <script src="Scripts/jquery-3.5.1.js"></script>
     <script src="Scripts/bootstrap.js"></script>
-    <script src="Scripts/CRUD/Crud.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
         $(document).ready(function () {
             $.ajax({
@@ -113,37 +112,6 @@
             });
         }
     </script>
-    <!--    Script chart information for Suicide Rates line graph. -->
-    <script>
-        // Labels being the bottom titles for Suicide Rates line graph
-        const labels = [
-            'Suicide Rates Sex',
-            'Suicide Rates Year',
-            'Suicide Rates Age',
-        ];
-
-        // The data that will be user in the line graph.
-        const data = {
-            labels: labels,
-            datasets: [{
-                label: 'Suicide Rates dataset',
-                backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132)',
-                data: [
-                    $('#Sex').val(),
-                    $('#Year').val(),
-                    $('#Age').val(),
-                ],
-            }]
-        };
-
-        // A config to recognise that it should be a line graph used with the data.
-        const config = {
-            type: 'line',
-            data: data,
-            options: {}
-        };
-    </script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -174,6 +142,12 @@
         </div>
     </div>
 </nav>
+<!--    html element to display Suicide Rate Chart.-->
+<div class="container mt-5">
+    <div>
+        <canvas id="SuicideRateChart" width="600" height="300"></canvas>
+    </div>
+</div>
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-6">
@@ -244,16 +218,7 @@
         </div>
     </form>
 </div>
-<!--    Creation of the chart, it will draw a line chart from the datasets provided from the database and display it on canvas id Suicide Rate Chart. -->
-<script>
-    const SuicideRateChart = new SuicideRateChart(
-        document.getElementById('SuicideRateChart'),
-        config
-    );
-</script>
-<!--    html element to display Suicide Rate Chart.-->
-<div>
-    <canvas id="SuicideRateChart"></canvas>
-</div>
+<script src="Scripts/CRUD/Crud.js"></script>
+<script src="Scripts/Charts/SuicideRatesChart.js"></script>
 </body>
 </html>

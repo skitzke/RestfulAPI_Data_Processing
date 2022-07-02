@@ -46,3 +46,19 @@ C:\Users\aakhtar.AD\Downloads\Data_Processing_Caner_Celik_4594738\RestfulAPI\HDI
 C:\Users\aakhtar.AD\Downloads\Data_Processing_Caner_Celik_4594738\RestfulAPI\HDIDataAccess\obj\Debug\HDIDataAccess.csproj.CopyComplete
 C:\Users\aakhtar.AD\Downloads\Data_Processing_Caner_Celik_4594738\RestfulAPI\HDIDataAccess\obj\Debug\HDIDataAccess.dll
 C:\Users\aakhtar.AD\Downloads\Data_Processing_Caner_Celik_4594738\RestfulAPI\HDIDataAccess\obj\Debug\HDIDataAccess.pdb
+C:\Users\Celik\Desktop\RestfulAPI - Copy\HDIDataAccess\bin\Debug\HDIDataAccess.dll.config
+C:\Users\Celik\Desktop\RestfulAPI - Copy\HDIDataAccess\bin\Debug\HDIDataAccess.dll
+C:\Users\Celik\Desktop\RestfulAPI - Copy\HDIDataAccess\bin\Debug\HDIDataAccess.pdb
+C:\Users\Celik\Desktop\RestfulAPI - Copy\HDIDataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Celik\Desktop\RestfulAPI - Copy\HDIDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Celik\Desktop\RestfulAPI - Copy\HDIDataAccess\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Celik\Desktop\RestfulAPI - Copy\HDIDataAccess\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Celik\Desktop\RestfulAPI - Copy\HDIDataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Celik\Desktop\RestfulAPI - Copy\HDIDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Celik\Desktop\RestfulAPI - Copy\HDIDataAccess\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Celik\Desktop\RestfulAPI - Copy\HDIDataAccess\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Celik\Desktop\RestfulAPI - Copy\HDIDataAccess\obj\Debug\HDIDataAccess.csproj.AssemblyReference.cache
+C:\Users\Celik\Desktop\RestfulAPI - Copy\HDIDataAccess\obj\Debug\HDIDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Celik\Desktop\RestfulAPI - Copy\HDIDataAccess\obj\Debug\HDIDataAccess.csproj.CopyComplete
+C:\Users\Celik\Desktop\RestfulAPI - Copy\HDIDataAccess\obj\Debug\HDIDataAccess.dll
+C:\Users\Celik\Desktop\RestfulAPI - Copy\HDIDataAccess\obj\Debug\HDIDataAccess.pdb

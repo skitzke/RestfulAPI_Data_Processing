@@ -20,3 +20,14 @@ C:\Users\Celik\Desktop\RestfulAPI\JsonValidator\obj\Debug\JsonValidator.csproj.C
 C:\Users\Celik\Desktop\RestfulAPI\JsonValidator\obj\Debug\JsonValidator.csproj.CopyComplete
 C:\Users\Celik\Desktop\RestfulAPI\JsonValidator\obj\Debug\JsonValidator.dll
 C:\Users\Celik\Desktop\RestfulAPI\JsonValidator\obj\Debug\JsonValidator.pdb
+C:\Users\Celik\Desktop\RestfulAPI - Copy\JsonValidator\bin\Debug\JsonValidator.dll
+C:\Users\Celik\Desktop\RestfulAPI - Copy\JsonValidator\bin\Debug\JsonValidator.pdb
+C:\Users\Celik\Desktop\RestfulAPI - Copy\JsonValidator\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Celik\Desktop\RestfulAPI - Copy\JsonValidator\bin\Debug\Newtonsoft.Json.Schema.dll
+C:\Users\Celik\Desktop\RestfulAPI - Copy\JsonValidator\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Celik\Desktop\RestfulAPI - Copy\JsonValidator\bin\Debug\Newtonsoft.Json.Schema.xml
+C:\Users\Celik\Desktop\RestfulAPI - Copy\JsonValidator\obj\Debug\JsonValidator.csproj.AssemblyReference.cache
+C:\Users\Celik\Desktop\RestfulAPI - Copy\JsonValidator\obj\Debug\JsonValidator.csproj.CoreCompileInputs.cache
+C:\Users\Celik\Desktop\RestfulAPI - Copy\JsonValidator\obj\Debug\JsonValidator.csproj.CopyComplete
+C:\Users\Celik\Desktop\RestfulAPI - Copy\JsonValidator\obj\Debug\JsonValidator.dll
+C:\Users\Celik\Desktop\RestfulAPI - Copy\JsonValidator\obj\Debug\JsonValidator.pdb

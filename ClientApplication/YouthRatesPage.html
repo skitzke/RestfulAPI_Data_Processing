@@ -5,8 +5,7 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet"/>
     <script src="Scripts/jquery-3.5.1.js"></script>
     <script src="Scripts/bootstrap.js"></script>
-    <script src="Scripts/CRUD/Crud.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <link href="Style/app.css" rel="stylesheet"/>
     <script>
         $(document).ready(function () {
@@ -190,6 +189,12 @@
         </div>
     </div>
 </nav>
+<!--    html element to display Youth Rates Chart.-->
+<div class="container mt-auto">
+    <div>
+        <canvas id="YouthRatesChart"></canvas>
+    </div>
+</div>
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-6">
@@ -265,16 +270,7 @@
         </div>
     </form>
 </div>
-<!--    Creation of the chart, it will draw a line chart from the datasets provided from the database and display it on canvas id Youth Rates Chart. -->
-<script>
-    const SuicideRateChart = new SuicideRateChart(
-        document.getElementById('YouthRatesChart'),
-        config
-    );
-</script>
-<!--    html element to display Youth Rates Chart.-->
-<div>
-    <canvas id="YouthRatesChart"></canvas>
-</div>
+<script src="Scripts/CRUD/Crud.js"></script>
+<script src="Scripts/Charts/YouthRatesPage.js"></script>
 </body>
 </html>
