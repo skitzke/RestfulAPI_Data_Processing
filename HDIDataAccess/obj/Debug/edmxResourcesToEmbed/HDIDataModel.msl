@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HDIModelStoreContainer" CdmEntityContainer="HDIEntities">
+    <EntitySetMapping Name="development_index">
+      <EntityTypeMapping TypeName="HDIModel.development_index">
+        <MappingFragment StoreEntitySet="development_index">
+          <ScalarProperty Name="HDI_ID" ColumnName="HDI_ID" />
+          <ScalarProperty Name="HDI_Rank" ColumnName="HDI_Rank" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="C2010" ColumnName="2010" />
+          <ScalarProperty Name="C2011" ColumnName="2011" />
+          <ScalarProperty Name="C2012" ColumnName="2012" />
+          <ScalarProperty Name="C2013" ColumnName="2013" />
+          <ScalarProperty Name="C2014" ColumnName="2014" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

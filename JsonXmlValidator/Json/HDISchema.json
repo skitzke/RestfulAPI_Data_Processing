@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/HDISchema.json",
+  "title": "Human development index",
+  "description": "Human development index from 2010 to 2014",
+  "type": "object",
+  "properties": {
+    "countries": {
+      "description": "Countries list representing human develpment index",
+      "type": "array",
+
+      "properties": {
+        "country-hdi-ID": {
+          "description": "Specific country ID",
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "country-hdi-rank": {
+          "description": "Country HDI ranking",
+          "type": "integer"
+        },
+        "country-name": {
+          "description": "Country name",
+          "type": "string"
+        },
+        "HDI-2010": {
+          "description": "Country HDI in 2010",
+          "type": "number"
+        },
+        "HDI-2011": {
+          "description": "Country HDI in 2011",
+          "type": "number"
+        },
+        "HDI-2012": {
+          "description": "Country HDI in 2012",
+          "type": "number"
+        },
+        "HDI-2013": {
+          "description": "Country HDI in 2013",
+          "type": "number"
+        },
+        "HDI-2014": {
+          "description": "Country HDI in 2014",
+          "type": "number"
+        }
+      },
+      "required": [ "country-hdi-ID" ]
+    }
+  },
+  "additionalProperties": false
+}

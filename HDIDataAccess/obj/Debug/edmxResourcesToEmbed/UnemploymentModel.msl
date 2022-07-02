@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Youth_unemployment_ratesModelStoreContainer" CdmEntityContainer="Youth_unemployment_ratesEntities1">
+    <EntitySetMapping Name="unemployment_rates">
+      <EntityTypeMapping TypeName="Youth_unemployment_ratesModel.unemployment_rates">
+        <MappingFragment StoreEntitySet="unemployment_rates">
+          <ScalarProperty Name="rate_ID" ColumnName="rate_ID" />
+          <ScalarProperty Name="Country_Name" ColumnName="Country Name" />
+          <ScalarProperty Name="Country_Code" ColumnName="Country Code" />
+          <ScalarProperty Name="C2010" ColumnName="2010" />
+          <ScalarProperty Name="C2011" ColumnName="2011" />
+          <ScalarProperty Name="C2012" ColumnName="2012" />
+          <ScalarProperty Name="C2013" ColumnName="2013" />
+          <ScalarProperty Name="C2014" ColumnName="2014" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,15 @@
+{
+  "countries": 
+  [
+    {
+      "$schema": "./Suicide-statisctics.json",
+      "country-stat-ID": 1,
+      "country-name": "Albania",
+      "suicide-statistic-year": 2010,
+      "gender": "male",
+      "age-group": "15-24 years",
+      "suicides-number": 6,
+      "country-population": 263581
+    }
+  ]
+}

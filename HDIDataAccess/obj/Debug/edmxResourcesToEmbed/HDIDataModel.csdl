@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HDIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="development_index">
+    <Key>
+      <PropertyRef Name="HDI_ID" />
+    </Key>
+    <Property Name="HDI_ID" Type="Int32" Nullable="false" />
+    <Property Name="HDI_Rank" Type="Int32" Nullable="false" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="C2010" Type="Double" Nullable="false" />
+    <Property Name="C2011" Type="Double" Nullable="false" />
+    <Property Name="C2012" Type="Double" Nullable="false" />
+    <Property Name="C2013" Type="Double" Nullable="false" />
+    <Property Name="C2014" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="HDIEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="development_index" EntityType="Self.development_index" />
+  </EntityContainer>
+</Schema>

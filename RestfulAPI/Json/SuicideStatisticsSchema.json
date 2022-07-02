@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/Suicide-statisctics.json",
+  "title": "Suicide-statisctics",
+  "description": "Suicide statisctics from 2010 to 2014",
+  "type": "object",
+  "properties": {
+    "countries": {
+      "description": "Countries list with suicide statistics",
+      "type": "array",
+
+      "properties": {
+        "country-stat-ID": {
+          "description": "Suicide statisctics ID per country",
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "country-name": {
+          "description": "Country name",
+          "type": "string"
+        },
+        "suicide-statistic-year": {
+          "description": "Suicide statistics yearly",
+          "type": "integer"
+        },
+        "gender": {
+          "description": "Suicide statistics gender",
+          "type": "string"
+        },
+        "age-group": {
+          "description": "Suicide statistics age group",
+          "type": "string"
+        },
+        "suicides-number": {
+          "description": "Total number of suicides",
+          "type": "integer"
+        },
+        "country-population": {
+          "description": "Population of a country",
+          "type": "integer"
+        }
+      },
+      "required": [ "country-stat-ID" ]
+    }
+  },
+  "additionalProperties": false
+}

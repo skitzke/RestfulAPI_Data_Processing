@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Suicide_ratesModelStoreContainer" CdmEntityContainer="Suicide_ratesEntities">
+    <EntitySetMapping Name="suicide_statistics">
+      <EntityTypeMapping TypeName="Suicide_ratesModel.suicide_statistics">
+        <MappingFragment StoreEntitySet="suicide_statistics">
+          <ScalarProperty Name="stat_ID" ColumnName="stat_ID" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="suicides_no" ColumnName="suicides_no" />
+          <ScalarProperty Name="population" ColumnName="population" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

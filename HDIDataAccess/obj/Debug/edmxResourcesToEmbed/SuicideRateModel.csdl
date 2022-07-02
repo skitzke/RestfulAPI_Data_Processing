@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Suicide_ratesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="suicide_statistics">
+    <Key>
+      <PropertyRef Name="stat_ID" />
+    </Key>
+    <Property Name="stat_ID" Type="Int32" Nullable="false" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="year" Type="Int32" Nullable="false" />
+    <Property Name="sex" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="age" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="suicides_no" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="population" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="Suicide_ratesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="suicide_statistics" EntityType="Self.suicide_statistics" />
+  </EntityContainer>
+</Schema>

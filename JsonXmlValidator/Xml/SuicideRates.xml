@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<suicide-statistics>
+	xmlns="https://www.w3schools.com"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://www.w3schools.com/xml SuicideStatisticsXMLSchema.xsd">
+	<country>
+		<country-stat-ID>1</country-stat-ID>
+		<country-name>Albania</country-name>
+		<suicide-statistic-year>2010</suicide-statistic-year>
+		<gender>female</gender>
+		<age-group>15-24 years</age-group>
+		<suicides-number>6</suicides-number>
+		<country-population>263581</country-population>
+	</country>
+</suicide-statistics>

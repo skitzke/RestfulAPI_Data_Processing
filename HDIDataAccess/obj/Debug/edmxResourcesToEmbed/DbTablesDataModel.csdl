@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HDIModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="development_index">
+    <Key>
+      <PropertyRef Name="HDI_ID" />
+    </Key>
+    <Property Name="HDI_ID" Type="Int32" Nullable="false" />
+    <Property Name="HDI_Rank" Type="Int32" Nullable="false" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="C2010" Type="Double" Nullable="false" />
+    <Property Name="C2011" Type="Double" Nullable="false" />
+    <Property Name="C2012" Type="Double" Nullable="false" />
+    <Property Name="C2013" Type="Double" Nullable="false" />
+    <Property Name="C2014" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="suicide_statistics">
+    <Key>
+      <PropertyRef Name="stat_ID" />
+    </Key>
+    <Property Name="stat_ID" Type="Int32" Nullable="false" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="year" Type="Int32" Nullable="false" />
+    <Property Name="sex" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="age" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="suicides_no" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="population" Type="Int32" />
+  </EntityType>
+  <EntityType Name="unemployment_rates">
+    <Key>
+      <PropertyRef Name="rate_ID" />
+    </Key>
+    <Property Name="rate_ID" Type="Int32" Nullable="false" />
+    <Property Name="Country_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Country_Code" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="C2010" Type="Double" Nullable="false" />
+    <Property Name="C2011" Type="Double" Nullable="false" />
+    <Property Name="C2012" Type="Double" Nullable="false" />
+    <Property Name="C2013" Type="Double" Nullable="false" />
+    <Property Name="C2014" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="HDIEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="development_index" EntityType="Self.development_index" />
+    <EntitySet Name="suicide_statistics" EntityType="Self.suicide_statistics" />
+    <EntitySet Name="unemployment_rates" EntityType="Self.unemployment_rates" />
+  </EntityContainer>
+</Schema>

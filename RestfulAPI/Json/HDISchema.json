@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "countries": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "$schema": {
+              "type": "string"
+            },
+            "country-hdi-ID": {
+              "type": "integer"
+            },
+            "country-hdi-rank": {
+              "type": "integer"
+            },
+            "country-name": {
+              "type": "string"
+            },
+            "HDI-2010": {
+              "type": "number"
+            },
+            "HDI-2011": {
+              "type": "number"
+            },
+            "HDI-2012": {
+              "type": "number"
+            },
+            "HDI-2013": {
+              "type": "number"
+            },
+            "HDI-2014": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "$schema",
+            "country-hdi-ID",
+            "country-hdi-rank",
+            "country-name",
+            "HDI-2010",
+            "HDI-2011",
+            "HDI-2012",
+            "HDI-2013",
+            "HDI-2014"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "countries"
+  ]
+}

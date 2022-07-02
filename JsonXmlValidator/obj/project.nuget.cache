@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "eaQUkPtZGtqi//zd9nJnVzg6U2+oVpzXVpAa0B8AQKvbL6TKbhDFlS3ss/BbKna3bpisefIhqI4ws0CYtSCs2A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Celik\\Desktop\\RestfulAPI - Copy\\JsonXmlValidator\\JsonXmlValidator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Celik\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Celik\\.nuget\\packages\\newtonsoft.json.schema\\3.0.14\\newtonsoft.json.schema.3.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

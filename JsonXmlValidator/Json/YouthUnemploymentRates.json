@@ -1,0 +1,15 @@
+{
+  "countries": [
+    {
+      "$schema": "./YouthUnemploymentRatesSchema.json",
+      "country-rate-ID": 1,
+      "country-name": "Lithuania",
+      "country-code": "LTU",
+      "unemployment-rate-2010": 4.46,
+      "unemployment-rate-2011": 4.54,
+      "unemployment-rate-2012": 5.42,
+      "unemployment-rate-2013": 5.50,
+      "unemployment-rate-2014": 6.56
+    }
+  ]
+}

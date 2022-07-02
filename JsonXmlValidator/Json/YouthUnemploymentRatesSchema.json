@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/YouthUnemploymentRatesSchema.json",
+  "title": "Youth unemployment rates",
+  "description": "Youth unemployment rates from 2010 to 2014",
+  "type": "object",
+  "properties": {
+    "countries": {
+      "description": "Countries list representing youth unemployment rates",
+      "type": "array",
+
+      "properties": {
+        "country-rate-ID": {
+          "description": "Country ID",
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "country-name": {
+          "description": "Country name",
+          "type": "string"
+        },
+        "country-code": {
+          "description": "Country code",
+          "type": "string"
+        },
+        "unemployment-rate-2010": {
+          "description": "Youth unemployment rates in 2010",
+          "type": "number"
+        },
+        "unemployment-rate-2011": {
+          "description": "Youth unemployment rates in 2011",
+          "type": "number"
+        },
+        "unemployment-rate-2012": {
+          "description": "Youth unemployment rates in 2012",
+          "type": "number"
+        },
+        "unemployment-rate-2013": {
+          "description": "Youth unemployment rates in 2013",
+          "type": "number"
+        },
+        "unemployment-rate-2014": {
+          "description": "Youth unemployment rates in 2014",
+          "type": "number"
+        }
+      },
+      "required": [ "country-rate-ID" ]
+    }
+  },
+  "additionalProperties": false
+}

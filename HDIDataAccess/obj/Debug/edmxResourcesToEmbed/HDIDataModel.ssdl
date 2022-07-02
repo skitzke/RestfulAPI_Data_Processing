@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HDIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="development_index">
+    <Key>
+      <PropertyRef Name="HDI_ID" />
+    </Key>
+    <Property Name="HDI_ID" Type="int" Nullable="false" />
+    <Property Name="HDI_Rank" Type="int" Nullable="false" />
+    <Property Name="Country" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="2010" Type="float" Nullable="false" />
+    <Property Name="2011" Type="float" Nullable="false" />
+    <Property Name="2012" Type="float" Nullable="false" />
+    <Property Name="2013" Type="float" Nullable="false" />
+    <Property Name="2014" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="HDIModelStoreContainer">
+    <EntitySet Name="development_index" EntityType="Self.development_index" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
