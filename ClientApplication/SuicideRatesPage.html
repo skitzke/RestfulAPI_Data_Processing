@@ -12,7 +12,7 @@
         $(document).ready(function () {
             $.ajax({
                 type: "GET",
-                url: 'https://localhost:44313/api/SuicideRate',
+                url: 'https://localhost:44313/api/SuicideRate/',
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data) {
@@ -49,7 +49,7 @@
             $(document).ready(function () {
                 $.ajax({
                     type: 'POST',
-                    url: 'https://localhost:44313/api/SuicideRate',
+                    url: 'https://localhost:44313/api/SuicideRate/',
                     data: "{'stat_ID':'" + $('#SRId').val() + "','country':'" + $('#country').val() + "','year':'" + $('#Year').val() + "','sex':'" + $('#Sex').val() + "','age':'" + $('#Age').val() + "','suicides no':'" + $('#SuicidesNr').val() + "','population':'" + $('#Population').val() + "'}",
                     contentType: 'application/json; charset=utf-8',
                     dataType: 'json',

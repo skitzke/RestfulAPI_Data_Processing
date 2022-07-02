@@ -12,7 +12,7 @@
         $(document).ready(function () {
             $.ajax({
                 type: "GET",
-                url: 'https://localhost:44313/api/UnemploymentRate',
+                url: 'https://localhost:44313/api/UnemploymentRate/',
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data) {
@@ -79,7 +79,7 @@
                 //country.y2014 = $('#y2014').val();
                 $.ajax({
                     type: 'POST',
-                    url: 'https://localhost:44313/api/UnemploymentRate',
+                    url: 'https://localhost:44313/api/UnemploymentRate/',
                     data: "{'rate_ID':'" + $('#RTId').val() + "','country_Name':'" + $('#country').val() + "','Country_Code':'" + $('#countryCode').val() + "','C2010':'" + $('#Year2010').val() + "','C2011':'" + $('#Year2011').val() + "','C2012':'" + $('#Year2012').val() + "','C2013':'" + $('#Year2013').val() + "','C2014':'" + $('#Year2014').val() + "'}",
                     contentType: 'application/json; charset=utf-8',
                     dataType: 'json',
