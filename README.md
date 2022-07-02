@@ -48,7 +48,18 @@ If you get some API structure errors check the bottom right icon called ISS Expr
 
 On each page you will first see working charts provided by Chart.js, then if you scroll to the bottom you will see the data in the tables of each page. All three front end pages has CRUD operations, all data should load. All endpoints were tested through Postman. Json was validated through https://www.jsonschemavalidator.net/ and XML was validated through https://www.xmlvalidation.com/, 
 
-***PS: If you get an error with entity framework please follow the Connection String guide above and fix it.***
+#### Postman
+
+![Postman1](https://i.imgur.com/BS3kZNw.png)
+
+![Postman2](https://i.imgur.com/Fc5g18w.png)
+
+![Postman3](https://i.imgur.com/6wdtJze.png)
+
+![Post](https://i.imgur.com/0Eevkfu.png)
+
+
+***PS: If you get an error popup when opening the webpage in relation to entity framework connection, then please follow the Connection String guide above and fix it.***
 
 All previous feedback given in the email is fixed, and therefore, i am resubmitting my assignment.
 
