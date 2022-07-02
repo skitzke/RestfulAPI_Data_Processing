@@ -1,43 +1,38 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Schema;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Web;
+﻿using System.IO;
 using System.Web.Mvc;
-
+using JsonValidator;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace RestfulAPI.Controllers
 {
     /// <summary>
-    /// This controller is Home Controller
+    ///     This controller is Home Controller
     /// </summary>
     public class HomeController : Controller
     {
         /// <summary>
-        ///  Home API
+        ///     Home API
         /// </summary>
         /// <returns>Return Home Page</returns>
         public ActionResult Index()
         {
             JObject HDI;
-            String HDISchema;
+            string HDISchema;
 
-            using (StreamReader r = new StreamReader(HttpContext.Server.MapPath("json/HDI.json")))
+            using (var r = new StreamReader(HttpContext.Server.MapPath("json/HDI.json")))
             {
-                string json = r.ReadToEnd();
+                var json = r.ReadToEnd();
                 HDI = JsonConvert.DeserializeObject<JObject>(json);
             }
-            using (StreamReader r = new StreamReader(HttpContext.Server.MapPath("json/HDISchema.json")))
+
+            using (var r = new StreamReader(HttpContext.Server.MapPath("json/HDISchema.json")))
             {
                 HDISchema = r.ReadToEnd();
-                
             }
 
-            var ValidationErrors= JsonValidator.Validator.Validate(HDI, HDISchema);
-            if(ValidationErrors.Count==0)
+            var ValidationErrors = Validator.Validate(HDI, HDISchema);
+            if (ValidationErrors.Count == 0)
             {
                 //Validation passed
             }
@@ -45,13 +40,9 @@ namespace RestfulAPI.Controllers
             {
                 //Validation failed 
                 //display all errors
-                foreach(string error in ValidationErrors)
-                {
-                    ModelState.AddModelError("key",error);
-
-                }
+                foreach (var error in ValidationErrors) ModelState.AddModelError("key", error);
             }
-           
+
             // true
             ViewBag.Title = "Home Page";
 

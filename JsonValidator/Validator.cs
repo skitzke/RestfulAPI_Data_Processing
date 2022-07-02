@@ -1,10 +1,7 @@
-﻿using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Schema;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema;
 
 namespace JsonValidator
 {
@@ -15,11 +12,8 @@ namespace JsonValidator
             IList<string> ValidationErros = new List<string>();
             try
             {
-
-                JSchema schema = JSchema.Parse(SchemaSource);
+                var schema = JSchema.Parse(SchemaSource);
                 var isValid = obj.IsValid(schema, out ValidationErros);
-
-
             }
             catch (Exception exc)
             {
@@ -28,6 +22,5 @@ namespace JsonValidator
 
             return ValidationErros;
         }
-
     }
 }

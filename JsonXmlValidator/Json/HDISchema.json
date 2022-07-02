@@ -8,7 +8,6 @@
     "countries": {
       "description": "Countries list representing human develpment index",
       "type": "array",
-
       "properties": {
         "country-hdi-ID": {
           "description": "Specific country ID",
@@ -44,7 +43,9 @@
           "type": "number"
         }
       },
-      "required": [ "country-hdi-ID" ]
+      "required": [
+        "country-hdi-ID"
+      ]
     }
   },
   "additionalProperties": false

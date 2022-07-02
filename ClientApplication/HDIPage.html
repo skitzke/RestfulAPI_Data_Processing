@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>CRUD</title>
-    <link rel="stylesheet" href="Content/bootstrap.min.css" />
-    <link href="Style/app.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet"/>
+    <link href="Style/app.css" rel="stylesheet"/>
     <script src="Scripts/jquery-3.5.1.js"></script>
     <script src="Scripts/bootstrap.js"></script>
     <script src="Scripts/CRUD/Crud.js"></script>
@@ -74,7 +74,7 @@
                     }
                 });
             });
-        };
+        }
     </script>
     <script>
         function RemoveRowByUserInput() {
@@ -124,19 +124,19 @@
                     }
                 });
             });
-        };
+        }
     </script>
-<!--    Script chart information for line graph. -->
+    <!--    Script chart information for line graph. -->
     <script>
         // Labels being the bottom titles for the line graph
         const labels = [
-        '2010',
-        '2011',
-        '2012',
-        '2013',
-        '2014',
+            '2010',
+            '2011',
+            '2012',
+            '2013',
+            '2014',
         ];
-        
+
         // The data that will be user in the chart.
         const data = {
             labels: labels,
@@ -153,7 +153,7 @@
                 ],
             }]
         };
-        
+
         // A config to recognise that it should be a line graph used with the data.
         const config = {
             type: 'line',
@@ -163,118 +163,122 @@
     </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="Index.html">
-                    <h2>CRUD operations on the api</h2>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="col-lg-12 text-right">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Database Tables</button>
-                        <div class="dropdown-menu">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="Index.html">
+                <h2>CRUD operations on the api</h2>
+            </a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+                    data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="col-lg-12 text-right">
+                <div class="btn-group">
+                    <button aria-expanded="false" aria-haspopup="true" class="btn btn-link dropdown-toggle"
+                            data-toggle="dropdown" type="button">Database Tables
+                    </button>
+                    <div class="dropdown-menu">
 
-                            <a class="dropdown-item" href="HDIPage.html">HDI index</a>
-                            <a class="dropdown-item" href="SuicideRatesPage.html">Suicide rates</a>
-                            <a class="dropdown-item" href="YouthRatesPage.html">Youth unemployment</a>
-                        </div>
+                        <a class="dropdown-item" href="HDIPage.html">HDI index</a>
+                        <a class="dropdown-item" href="SuicideRatesPage.html">Suicide rates</a>
+                        <a class="dropdown-item" href="YouthRatesPage.html">Youth unemployment</a>
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 <!--    Creation of the chart, it will draw a line chart from the datasets provided from the database and display it on canvas id HDIChart. -->
-    <script>
-        const HDIChart = new HDIChart(
-            document.getElementById('HDIChart'),
-            config
-        );
-    </script>
+<script>
+    const HDIChart = new HDIChart(
+        document.getElementById('HDIChart'),
+        config
+    );
+</script>
 <!--    html element to display chart.-->
-    <div>
-        <canvas id="HDIChart"></canvas>
-    </div>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-6">
-                <h4>HDI country list</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 text-right mb-2">
-                <form id="form1" runat="server">
-                    <input type="text" id="search" pattern="\d*" placeholder="Delete by Id nr" />
-                    <input class="btn btn-danger" onclick="RemoveRowByUserInput()" id="remove" type="submit" name="deleteRow" value="Delete" />
-                </form>
-            </div>
-        </div>
-        <div class="row">
-            <div id="scroll">
-                <table class="table table-striped table-bordered table-hover" id="HdiTable">
-                    <tr>
-                        <th>Row ID</th>
-                        <th>HDI country ranking</th>
-                        <th>Country name</th>
-                        <th>Year 2010</th>
-                        <th>Year 2011</th>
-                        <th>Year 2012</th>
-                        <th>Year 2013</th>
-                        <th>Year 2014</th>
-                    </tr>
-                </table>
-            </div>
+<div>
+    <canvas id="HDIChart"></canvas>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h4>HDI country list</h4>
         </div>
     </div>
-    
-    <div class="container bg-light mt-5">
-        <form runat="server">
-            <div class="row">
-                <div class="form-group col-sm-6">
-                    <label>HDI ID:</label>
-                    <input type="text" class="form-control" id="hdiId" placeholder="Enter HDI ID">
-                    <small class="form-text text-muted">The id must be unique</small>
-                </div>
-                <div class="form-group col-sm-6">
-                    <label>HDI rank:</label>
-                    <input type="text" class="form-control" id="hdiRank" placeholder="Enter HDI ranking">
-                </div>
+    <div class="row">
+        <div class="col-lg-12 text-right mb-2">
+            <form id="form1" runat="server">
+                <input id="search" pattern="\d*" placeholder="Delete by Id nr" type="text"/>
+                <input class="btn btn-danger" id="remove" name="deleteRow" onclick="RemoveRowByUserInput()"
+                       type="submit" value="Delete"/>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div id="scroll">
+            <table class="table table-striped table-bordered table-hover" id="HdiTable">
+                <tr>
+                    <th>Row ID</th>
+                    <th>HDI country ranking</th>
+                    <th>Country name</th>
+                    <th>Year 2010</th>
+                    <th>Year 2011</th>
+                    <th>Year 2012</th>
+                    <th>Year 2013</th>
+                    <th>Year 2014</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="container bg-light mt-5">
+    <form runat="server">
+        <div class="row">
+            <div class="form-group col-sm-6">
+                <label>HDI ID:</label>
+                <input class="form-control" id="hdiId" placeholder="Enter HDI ID" type="text">
+                <small class="form-text text-muted">The id must be unique</small>
             </div>
-            <div class="row mb-5">
-                <div class="form-group col-sm-6">
-                    <label>Country name:</label>
-                    <input type="text" class="form-control" id="country" placeholder="Enter country name">
-                </div>
-                <div class="form-group col-sm-6">
-                    <label>2010:</label>
-                    <input type="text" class="form-control" id="y2010" placeholder="Enter year stats">
-                </div>
-                <div class="form-group col-sm-6">
-                    <label>2011:</label>
-                    <input type="text" class="form-control" id="y2011" placeholder="Enter year stats">
-                </div>
-                <div class="form-group col-sm-6">
-                    <label>2012:</label>
-                    <input type="text" class="form-control" id="y2012" placeholder="Enter year stats">
-                </div>
-                <div class="form-group col-sm-6">
-                    <label>2013:</label>
-                    <input type="text" class="form-control" id="y2013" placeholder="Enter year stats">
-                </div>
-                <div class="form-group col-sm-6">
-                    <label>2014:</label>
-                    <input type="text" class="form-control" id="y2014" placeholder="Enter year stats">
-                </div>
-                <div class="col-12">
-                    <button type="submit" id="inputform" class="btn btn-primary" onclick="inputCountry()">Submit</button>
-                    <button type="submit" id="UpdateBtn" class="btn btn-info" onclick="UpdateCountry()">Update</button>
-                </div>
+            <div class="form-group col-sm-6">
+                <label>HDI rank:</label>
+                <input class="form-control" id="hdiRank" placeholder="Enter HDI ranking" type="text">
             </div>
-        </form>
-    </div>    
+        </div>
+        <div class="row mb-5">
+            <div class="form-group col-sm-6">
+                <label>Country name:</label>
+                <input class="form-control" id="country" placeholder="Enter country name" type="text">
+            </div>
+            <div class="form-group col-sm-6">
+                <label>2010:</label>
+                <input class="form-control" id="y2010" placeholder="Enter year stats" type="text">
+            </div>
+            <div class="form-group col-sm-6">
+                <label>2011:</label>
+                <input class="form-control" id="y2011" placeholder="Enter year stats" type="text">
+            </div>
+            <div class="form-group col-sm-6">
+                <label>2012:</label>
+                <input class="form-control" id="y2012" placeholder="Enter year stats" type="text">
+            </div>
+            <div class="form-group col-sm-6">
+                <label>2013:</label>
+                <input class="form-control" id="y2013" placeholder="Enter year stats" type="text">
+            </div>
+            <div class="form-group col-sm-6">
+                <label>2014:</label>
+                <input class="form-control" id="y2014" placeholder="Enter year stats" type="text">
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" id="inputform" onclick="inputCountry()" type="submit">Submit</button>
+                <button class="btn btn-info" id="UpdateBtn" onclick="UpdateCountry()" type="submit">Update</button>
+            </div>
+        </div>
+    </form>
+</div>
 </body>
 </html>
