@@ -113,6 +113,37 @@
             });
         }
     </script>
+    <!--    Script chart information for Suicide Rates line graph. -->
+    <script>
+        // Labels being the bottom titles for Suicide Rates line graph
+        const labels = [
+            'Suicide Rates Sex',
+            'Suicide Rates Year',
+            'Suicide Rates Age',
+        ];
+
+        // The data that will be user in the line graph.
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Suicide Rates dataset',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [
+                    $('#Sex').val(),
+                    $('#Year').val(),
+                    $('#Age').val(),
+                ],
+            }]
+        };
+
+        // A config to recognise that it should be a line graph used with the data.
+        const config = {
+            type: 'line',
+            data: data,
+            options: {}
+        };
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -212,6 +243,17 @@
             </div>
         </div>
     </form>
+</div>
+<!--    Creation of the chart, it will draw a line chart from the datasets provided from the database and display it on canvas id Suicide Rate Chart. -->
+<script>
+    const SuicideRateChart = new SuicideRateChart(
+        document.getElementById('SuicideRateChart'),
+        config
+    );
+</script>
+<!--    html element to display Suicide Rate Chart.-->
+<div>
+    <canvas id="SuicideRateChart"></canvas>
 </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head runat="server">
     <title>CRUD</title>
     <link href="Content/bootstrap.min.css" rel="stylesheet"/>
@@ -44,7 +44,6 @@
             });
         });
     </script>
-
     <script>
         function RemoveRowByUserInput() {
             $(document).ready(function () {
@@ -94,7 +93,6 @@
             });
         }
     </script>
-
     <script>
         function UpdateCountry() {
             $(document).ready(function () {
@@ -125,6 +123,41 @@
                 });
             });
         }
+    </script>
+    <!--    Script chart information for Youth Rates line graph. -->
+    <script>
+        // Labels being the bottom titles for Youth Rates line graph
+        const labels = [
+            'Youth Rates 2010',
+            'Youth Rates 2011',
+            'Youth Rates 2012',
+            'Youth Rates 2013',
+            'Youth Rates 2014',
+        ];
+
+        // The data that will be user in the line graph.
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Youth Rates dataset',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [
+                    $('#Year2010').val(),
+                    $('#Year2011').val(),
+                    $('#Year2012').val(),
+                    $('#Year2013').val(),
+                    $('#Year2014').val()
+                ],
+            }]
+        };
+
+        // A config to recognise that it should be a line graph used with the data.
+        const config = {
+            type: 'line',
+            data: data,
+            options: {}
+        };
     </script>
 </head>
 <body>
@@ -230,6 +263,17 @@
             </div>
         </div>
     </form>
+</div>
+<!--    Creation of the chart, it will draw a line chart from the datasets provided from the database and display it on canvas id Youth Rates Chart. -->
+<script>
+    const SuicideRateChart = new SuicideRateChart(
+        document.getElementById('YouthRatesChart'),
+        config
+    );
+</script>
+<!--    html element to display Youth Rates Chart.-->
+<div>
+    <canvas id="YouthRatesChart"></canvas>
 </div>
 </body>
 </html>
