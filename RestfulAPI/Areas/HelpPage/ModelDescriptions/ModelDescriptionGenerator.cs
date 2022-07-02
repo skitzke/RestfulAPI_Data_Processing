@@ -18,6 +18,8 @@ namespace RestfulAPI.Areas.HelpPage.ModelDescriptions
     /// </summary>
     public class ModelDescriptionGenerator
     {
+        private readonly Lazy<IModelDocumentationProvider> _documentationProvider;
+
         // Modify this to support more data annotation attributes.
         private readonly IDictionary<Type, Func<object, string>> AnnotationTextGenerator =
             new Dictionary<Type, Func<object, string>>
@@ -94,8 +96,6 @@ namespace RestfulAPI.Areas.HelpPage.ModelDescriptions
             { typeof(DateTimeOffset), "date" },
             { typeof(bool), "boolean" }
         };
-
-        private readonly Lazy<IModelDocumentationProvider> _documentationProvider;
 
         public ModelDescriptionGenerator(HttpConfiguration config)
         {
