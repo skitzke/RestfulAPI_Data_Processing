@@ -61,8 +61,6 @@ On each page you will first see working charts provided by Chart.js, then if you
 
 ***PS: If you get an error popup when opening the webpage in relation to entity framework connection, then please follow the Connection String guide above and fix it.***
 
-All previous feedback given in the email is fixed, and therefore, i am resubmitting my assignment.
-
 Caner Celik (4594738)
 
 
